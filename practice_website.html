@@ -1,0 +1,1282 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7203e0f682.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+        header{
+            position:sticky;
+            top: 0px;
+            z-index: 2;
+        }
+
+        .nav {
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px 50px;
+            
+        }
+
+        .menu>ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .profile>ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 20px;
+        }
+
+        th,
+        td {
+
+            margin: 5px;
+            padding: 2px;
+
+        }
+
+        .profile>ul>li>i+input {
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        /* MEN START */
+        .nav>.menu>ul>li:nth-of-type(2)>a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .hidden{
+            display: none;
+            position: absolute;
+            background-color: azure;
+            list-style-type: none;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(2)>a:hover {
+            display: block;
+            border-bottom: 3px solid red;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(2):hover .hidden {
+            display: block;
+        }
+
+        /* MEN END */
+        /* WOMEN START */
+        .nav>.menu>ul>li:nth-of-type(3)>a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .hidden{
+            display: none;
+            position: absolute;
+            background-color: azure;
+            list-style-type: none;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(3)>a:hover {
+            display: block;
+            border-bottom: 3px solid rgb(235, 37, 216);
+        }
+
+        .nav>.menu>ul>li:nth-of-type(3):hover .hidden {
+            display: block;
+        }
+
+        /* WOMEN END */
+        /* START KIDS */
+        .nav>.menu>ul>li:nth-of-type(4)>a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .hidden{
+            display: none;
+            position: absolute;
+            background-color: azure;
+            list-style-type: none;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(4)>a:hover {
+            display: block;
+            border-bottom: 3px solid rgba(235, 37, 90, 0.767);
+        }
+
+        .nav>.menu>ul>li:nth-of-type(4):hover .hidden {
+            display: block;
+        }
+
+        /* END KIDS */
+        /* START HOME&LIVING */
+        .nav>.menu>ul>li:nth-of-type(5)>a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .hidden{
+            display: none;
+            position: absolute;
+            background-color: azure;
+            list-style-type: none;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(5)>a:hover {
+            display: block;
+            border-bottom: 3px solid yellow;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(5):hover .hidden {
+            display: block;
+        }
+
+        /* END HOME&LIVING */
+        /* START BEATY */
+        .nav>.menu>ul>li:nth-of-type(6)>a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .hidden{
+            display: none;
+            position: absolute;
+            background-color: azure;
+            list-style-type: none;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(6)>a:hover {
+            display: block;
+            border-bottom: 3px solid rgb(46, 244, 46);
+        }
+
+        .nav>.menu>ul>li:nth-of-type(6):hover .hidden {
+            display: block;
+        }
+
+        /* END BEATY */
+        .nav>.menu>ul>li:nth-of-type(7)>a {
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .hidden{
+            display: none;
+            position: absolute;
+            background-color: azure;
+            list-style-type: none;
+        }
+
+        .nav>.menu>ul>li:nth-of-type(7)>a:hover {
+            display: block;
+            border-bottom: 3px solid rgb(236, 39, 9);
+        }
+
+        .nav>.menu>ul>li:nth-of-type(7):hover .hidden {
+            display: block;
+        }
+
+        .temp {
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-around;
+            border: 15px solid rgb(154, 29, 29);
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 30px;
+
+        }
+
+        .temp>div:nth-of-type(3)>div {
+
+            margin-top: 100px;
+        }
+
+        .temp>div:nth-of-type(2) {
+            margin-top: 100px;
+        }
+
+        .temp>div:nth-of-type(4) {
+            margin-top: 100px;
+
+        }
+
+        .temp>.left_flat>div:nth-of-type(1) {
+            background-color: rgb(239, 64, 64);
+            margin: 15px;
+            border-radius: 10px;
+
+        }
+
+        .temp>.left_flat>div:nth-of-type(2) {
+            background-color: rgb(239, 64, 64);
+            margin: 15px;
+            border-radius: 10px;
+
+        }
+
+        .temp>.left_flat>div:nth-of-type(3) {
+            background-color: rgb(239, 64, 64);
+            margin: 15px;
+            border-radius: 10px;
+
+        }
+
+        .temp>.right_flat>div:nth-of-type(1) {
+            background-color: rgb(239, 64, 64);
+            margin: 15px;
+            border-radius: 10px;
+
+        }
+
+        .temp>.right_flat>div:nth-of-type(2) {
+            background-color: rgb(239, 64, 64);
+            margin: 15px;
+            border-radius: 10px;
+
+        }
+
+        .temp>.right_flat>div:nth-of-type(3) {
+            background-color: rgb(239, 64, 64);
+            margin: 15px;
+            border-radius: 10px;
+        }
+
+        .awesome {
+            text-align: center;
+            margin: 60px;
+        }
+
+        .awesome>h1+input {
+            background-color: rgb(212, 212, 17);
+        }
+
+        .awesome_card {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            justify-content: space-around;
+
+        }
+
+        /* card */
+        .card {
+
+            background-color: white;
+            width: 200px;
+            position: relative;
+            border: 2px solid rgba(230, 230, 230, 0.284);
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            background-image: url("./images/t-shirt.jpg");
+            background-repeat: no-repeat;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            background-color: rgba(255, 255, 255, 0.907);
+            display: inline-block;
+            padding: 2px 7px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+
+        .content {
+            position: relative;
+            left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content>span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .content span:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content span:nth-of-type(3) {
+            font-weight: bold;
+        }
+
+        .hide {
+            background-color: white;
+            width: 100%;
+            height: 105px;
+            position: absolute;
+            bottom: 38px;
+            display: none;
+        }
+
+        .wishlist {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            border: 1px solid rgba(128, 128, 128, 0.506);
+            text-align: center;
+            font-size: 18px;
+            padding: 2px 0px;
+            position: relative;
+            top: 20px;
+        }
+
+        .wishlist:hover {
+            border: 1px solid black;
+        }
+
+        .card:hover .hide {
+            display: block;
+        }
+
+        .size {
+            position: relative;
+            top: 30px;
+            left: 10px;
+            color: grey;
+        }
+
+        /* card1 */
+        .card1 {
+
+            background-color: white;
+            width: 200px;
+            position: relative;
+            border: 2px solid rgba(230, 230, 230, 0.284);
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            background-image: url("./images/t-shirt.jpg");
+            background-repeat: no-repeat;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            background-color: rgba(255, 255, 255, 0.907);
+            display: inline-block;
+            padding: 2px 7px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+
+        .content {
+            position: relative;
+            left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content>span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .content span:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content span:nth-of-type(3) {
+            font-weight: bold;
+        }
+
+        .hide {
+            background-color: white;
+            width: 100%;
+            height: 105px;
+            position: absolute;
+            bottom: 38px;
+            display: none;
+        }
+
+        .wishlist {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            border: 1px solid rgba(128, 128, 128, 0.506);
+            text-align: center;
+            font-size: 18px;
+            padding: 2px 0px;
+            position: relative;
+            top: 20px;
+        }
+
+        .wishlist:hover {
+            border: 1px solid black;
+        }
+
+        .card:hover .hide {
+            display: block;
+        }
+
+        .size {
+            position: relative;
+            top: 30px;
+            left: 10px;
+            color: grey;
+        }
+
+        /* card2 */
+        .card2 {
+
+            background-color: white;
+            width: 200px;
+            position: relative;
+            border: 2px solid rgba(230, 230, 230, 0.284);
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            background-image: url("./images/t-shirt.jpg");
+            background-repeat: no-repeat;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            background-color: rgba(255, 255, 255, 0.907);
+            display: inline-block;
+            padding: 2px 7px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+
+        .content {
+            position: relative;
+            left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content>span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .content span:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content span:nth-of-type(3) {
+            font-weight: bold;
+        }
+
+        .hide {
+            background-color: white;
+            width: 100%;
+            height: 105px;
+            position: absolute;
+            bottom: 38px;
+            display: none;
+        }
+
+        .wishlist {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            border: 1px solid rgba(128, 128, 128, 0.506);
+            text-align: center;
+            font-size: 18px;
+            padding: 2px 0px;
+            position: relative;
+            top: 20px;
+        }
+
+        .wishlist:hover {
+            border: 1px solid black;
+        }
+
+        .card:hover .hide {
+            display: block;
+        }
+
+        .size {
+            position: relative;
+            top: 30px;
+            left: 10px;
+            color: grey;
+        }
+
+        /* card3 */
+        .card4 {
+
+            background-color: white;
+            width: 200px;
+            position: relative;
+            border: 2px solid rgba(230, 230, 230, 0.284);
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            background-image: url("./images/t-shirt.jpg");
+            background-repeat: no-repeat;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            background-color: rgba(255, 255, 255, 0.907);
+            display: inline-block;
+            padding: 2px 7px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+
+        .content {
+            position: relative;
+            left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content>span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .content span:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content span:nth-of-type(3) {
+            font-weight: bold;
+        }
+
+        .hide {
+            background-color: white;
+            width: 100%;
+            height: 105px;
+            position: absolute;
+            bottom: 38px;
+            display: none;
+        }
+
+        .wishlist {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            border: 1px solid rgba(128, 128, 128, 0.506);
+            text-align: center;
+            font-size: 18px;
+            padding: 2px 0px;
+            position: relative;
+            top: 20px;
+        }
+
+        .wishlist:hover {
+            border: 1px solid black;
+        }
+
+        .card:hover .hide {
+            display: block;
+        }
+
+        .size {
+            position: relative;
+            top: 30px;
+            left: 10px;
+            color: grey;
+        }
+
+        /* card4 */
+        .card4 {
+
+            background-color: white;
+            width: 200px;
+            position: relative;
+            border: 2px solid rgba(230, 230, 230, 0.284);
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            background-image: url("./images/t-shirt.jpg");
+            background-repeat: no-repeat;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            background-color: rgba(255, 255, 255, 0.907);
+            display: inline-block;
+            padding: 2px 7px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+
+        .content {
+            position: relative;
+            left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content>span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .content span:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content span:nth-of-type(3) {
+            font-weight: bold;
+        }
+
+        .hide {
+            background-color: white;
+            width: 100%;
+            height: 105px;
+            position: absolute;
+            bottom: 38px;
+            display: none;
+        }
+
+        .wishlist {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            border: 1px solid rgba(128, 128, 128, 0.506);
+            text-align: center;
+            font-size: 18px;
+            padding: 2px 0px;
+            position: relative;
+            top: 20px;
+        }
+
+        .wishlist:hover {
+            border: 1px solid black;
+        }
+
+        .card:hover .hide {
+            display: block;
+        }
+
+        .size {
+            position: relative;
+            top: 30px;
+            left: 10px;
+            color: grey;
+        }
+
+        /* card5 */
+        .card5 {
+
+            background-color: white;
+            width: 200px;
+            position: relative;
+            border: 2px solid rgba(230, 230, 230, 0.284);
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            background-image: url("./images/t-shirt.jpg");
+            background-repeat: no-repeat;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            background-color: rgba(255, 255, 255, 0.907);
+            display: inline-block;
+            padding: 2px 7px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+
+        .content {
+            position: relative;
+            left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content>span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .content span:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content span:nth-of-type(3) {
+            font-weight: bold;
+        }
+
+        .hide {
+            background-color: white;
+            width: 100%;
+            height: 105px;
+            position: absolute;
+            bottom: 38px;
+            display: none;
+        }
+
+        .wishlist {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            border: 1px solid rgba(128, 128, 128, 0.506);
+            text-align: center;
+            font-size: 18px;
+            padding: 2px 0px;
+            position: relative;
+            top: 20px;
+        }
+
+        .wishlist:hover {
+            border: 1px solid black;
+        }
+
+        .card:hover .hide {
+            display: block;
+        }
+
+        .size {
+            position: relative;
+            top: 30px;
+            left: 10px;
+            color: grey;
+        }
+
+        /* card6 */
+        .card6{
+
+            background-color: white;
+            width: 200px;
+            position: relative;
+            border: 2px solid rgba(230, 230, 230, 0.284);
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            background-image: url("./images/t-shirt.jpg");
+            background-repeat: no-repeat;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            background-color: rgba(255, 255, 255, 0.907);
+            display: inline-block;
+            padding: 2px 7px;
+            position: absolute;
+            top: 320px;
+            left: 20px;
+
+        }
+
+        .content {
+            position: relative;
+            left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content>span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .content span:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content span:nth-of-type(3) {
+            font-weight: bold;
+        }
+
+        .hide{
+            background-color: white;
+            width: 100%;
+            height: 105px;
+            position: absolute;
+            bottom: 38px;
+            display: none;
+        }
+
+        .wishlist {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            border: 1px solid rgba(128, 128, 128, 0.506);
+            text-align: center;
+            font-size: 18px;
+            padding: 2px 0px;
+            position: relative;
+            top: 20px;
+        }
+
+        .wishlist:hover {
+            border: 1px solid black;
+        }
+
+        .card:hover .hide {
+            display: block;
+        }
+
+        .size {
+            position: relative;
+            top: 30px;
+            left: 10px;
+            color: grey;
+        }
+        .contact_us{
+            text-align: center;
+            margin-top: 60px;
+        }
+        /************************************ footer************************************************** */
+        footer{
+            margin: 10px;
+            margin-top: 70px;
+            margin-bottom: 100px;
+            background-color: grey;
+            height: 400px;
+            
+        }
+        .footer_table{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            
+            
+        }
+        .footer_table>div:nth-of-type(1){
+            margin-top: 40px;
+        }
+        .footer_table>div:nth-of-type(2){
+            margin-top: 40px;
+        }
+        .footer_table>div:nth-of-type(3){
+            margin-top: 40px;
+        }
+        .footer_table>div:nth-of-type(1)>ul{
+            list-style: none;
+        }
+        .footer_table>div:nth-of-type(2)>ul{
+            list-style: none;
+        }
+        .flat_sticky{
+            position: absolute;
+            top: 200px;
+        }
+        .flat_sticky>div{
+            
+            display: inline-block;
+            background-color: green;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <!-- <div class="logo">
+                <a href="https://www.myntra.com/"><img src="./myntra-logo2.png"width="50px"
+                    alt=""></a>
+            </div> -->
+            <div class="menu">
+                <ul>
+                    <li>logo</li>
+                    <li><a href="">MEN</a>
+                        <table class="hidden">
+                            <tr>
+                                <th>topwear</th>
+                                <th>bottomwear</th>
+                                <th>footwear</th>
+                                <th>innerwear</th>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                        </table>
+
+                    </li>
+                    <li><a href="">WOMEN</a>
+                        <table class="hidden">
+                            <tr>
+                                <th>topwear</th>
+                                <th>bottomwear</th>
+                                <th>footwear</th>
+                                <th>innerwear</th>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                        </table>
+
+                    </li>
+                    <li><a href="">KIDS</a>
+                        <table class="hidden">
+                            <tr>
+                                <th>topwear</th>
+                                <th>bottomwear</th>
+                                <th>footwear</th>
+                                <th>innerwear</th>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li><a href="">HOME&LIVING</a>
+                        <table class="hidden">
+                            <tr>
+                                <th>topwear</th>
+                                <th>bottomwear</th>
+                                <th>footwear</th>
+                                <th>innerwear</th>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li><a href="">BEAUTY</a>
+                        <table class="hidden">
+                            <tr>
+                                <th>topwear</th>
+                                <th>bottomwear</th>
+                                <th>footwear</th>
+                                <th>innerwear</th>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                        </table>
+                    </li>
+
+                    <li><a href="">STDIO</a>
+                        <table class="hidden">
+                            <tr>
+                                <th>topwear</th>
+                                <th>bottomwear</th>
+                                <th>footwear</th>
+                                <th>innerwear</th>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">shirt</a></td>
+                                <td><a href="">Jeans</a></td>
+                                <td><a href="">sport shoes</a></td>
+                                <td><a href="">Boxers</a></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="profile">
+                <ul>
+                    <li><i class="fa-solid fa-magnifying-glass"></i><input type="text"
+                            placeholder="Search for product,brands and more" size="50"></li>
+                    <li><i class="fa-solid fa-user"></i><br>profile</li>
+                    <li><i class="fa-solid fa-heart"></i><br>Wishlist</li>
+                    <li><i class="fa-solid fa-bag-shopping"></i><br>bag</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="temp">
+        <div class="left_flat">
+            <div>
+                <h3>FLAT</h3><br>
+                <h1>80% OFF</h1>
+            </div>
+            <div>
+                <h3>FLAT</h3><br>
+                <h1>70% OFF</h1>
+            </div>
+            <div>
+                <h3>FLAT</h3><br>
+                <h1>60% OFF</h1>
+            </div>
+        </div>
+        <div><img src="./images/LEFT-images-removebg-preview.png" height="300px" width="200px" alt=""></div>
+        <div>
+            <div>
+                <h3>FASHION SALE</h3><br>
+                <h1>40%-80% OFF <br>
+                    <h3>BEST OF MEN'S WEAR</h3>
+                </h1>
+            </div>
+        </div>
+        <div class="right_image"><img src="./images/RIGHT-download__1_-removebg-preview.png" height="300px" width="200px"
+                alt=""></div>
+        <div class="right_flat">
+            <div>
+                <h3>HALF</h3><br>
+                <h1>PRICE</h1><br>
+                <h3>STORE</h3>
+            </div>
+            <div>
+                <h3>UNDER</h3><br>
+                <h1>Rs.400</h1><br>
+                <h3>STORE</h3>
+            </div>
+            <div>
+                <h3>FLAT</h3><br>
+                <h1>400 OFF</h1><br>
+                <h3>FREE SHIPPING ON 1st ORDER</h3>
+            </div>
+        </div>
+    </div>
+    <div class="awesome">
+        <h1>AWESOME DEALS</h1><input type="submit" value="+VIEW ALL">
+    </div>
+    <div class="awesome_card">
+        <div class="card">
+            <div class="img"></div>
+            <div class="rating">4.4 ⭐ |1k</div>
+            <div class="content">
+                <span>Anouk</span><br>
+                <span>Striped Straight t-shirt</span><br>
+                <span>Rs.1000 <del>3000</del>(65% off)</span>
+            </div>
+            <div class="hide">
+                <div class="wishlist">❤️ wishlist</div>
+                <div class="size">Size: XL,S,L,M,XXL</div>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="img"></div>
+            <div class="rating">4.4 ⭐ |1k</div>
+            <div class="content">
+                <span>Anouk</span><br>
+                <span>Striped Straight t-shirt</span><br>
+                <span>Rs.1000 <del>3000</del>(65% off)</span>
+            </div>
+            <div class="hide">
+                <div class="wishlist">❤️ wishlist</div>
+                <div class="size">Size: XL,S,L,M,XXL</div>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img"></div>
+            <div class="rating">4.4 ⭐ |1k</div>
+            <div class="content">
+                <span>Anouk</span><br>
+                <span>Striped Straight t-shirt</span><br>
+                <span>Rs.1000 <del>3000</del>(65% off)</span>
+            </div>
+            <div class="hide">
+                <div class="wishlist">❤️ wishlist</div>
+                <div class="size">Size: XL,S,L,M,XXL</div>
+            </div>
+        </div>
+        <div class="card3">
+            <div class="img"></div>
+            <div class="rating">4.4 ⭐ |1k</div>
+            <div class="content">
+                <span>Anouk</span><br>
+                <span>Striped Straight t-shirt</span><br>
+                <span>Rs.1000 <del>3000</del>(65% off)</span>
+            </div>
+            <div class="hide">
+                <div class="wishlist">❤️ wishlist</div>
+                <div class="size">Size: XL,S,L,M,XXL</div>
+            </div>
+        </div>
+        <div class="card4">
+            <div class="img"></div>
+            <div class="rating">4.4 ⭐ |1k</div>
+            <div class="content">
+                <span>Anouk</span><br>
+                <span>Striped Straight t-shirt</span><br>
+                <span>Rs.1000 <del>3000</del>(65% off)</span>
+            </div>
+            <div class="hide">
+                <div class="wishlist">❤️ wishlist</div>
+                <div class="size">Size: XL,S,L,M,XXL</div>
+            </div>
+        </div>
+        <div class="card5">
+            <div class="img"></div>
+            <div class="rating">4.4 ⭐ |1k</div>
+            <div class="content">
+                <span>Anouk</span><br>
+                <span>Striped Straight t-shirt</span><br>
+                <span>Rs.1000 <del>3000</del>(65% off)</span>
+            </div>
+            <div class="hide">
+                <div class="wishlist">❤️ wishlist</div>
+                <div class="size">Size: XL,S,L,M,XXL</div>
+            </div>
+        </div>
+        <div class="card6">
+            <div class="img"></div>
+            <div class="rating">4.4 ⭐ |1k</div>
+            <div class="content">
+                <span>Anouk</span><br>
+                <span>Striped Straight t-shirt</span><br>
+                <span>Rs.1000 <del>3000</del>(65% off)</span>
+            </div>
+            <div class="hide">
+                <div class="wishlist">❤️ wishlist</div>
+                <div class="size">Size: XL,S,L,M,XXL</div>
+            </div>
+        </div>
+    </div>
+    <div class="contact_us">
+        <h1>CONTACT-US</h1>
+    </div>
+    <footer>
+        <div class="footer_table">
+            <div class="column1">
+                <h3>ONLINE SHOPPING</h3>
+                <ul>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Kids</li>
+                    <li>Home & Living</li>
+                    <li>Beauty</li>
+                    <li>Gift Cards</li>
+                    <li>Myntra Insider</li>
+                </ul>
+            </div>
+            <div class="column2">
+                <h3>CUSTOMER POLICIES</h3>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>FAQ</li>
+                    <li>T&C</li>
+                    <li>Terms Of Use</li>
+                    <li>Track Orders</li>
+                    <li>Shipping</li>
+                    <li>Cancellation</li>
+                    <li>Returns</li>
+                    <li>Privacy Policy</li>
+                    <li>Grievance Officer</li>
+                </ul>
+            </div>
+            <div class="column3">
+                <h3>EXPERIENCE MYNTRA APP ON MOBILE</h3>
+                <br><br>
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-apple"></i>
+                <br>
+                <br>
+                <h3>KEEP IN TOUCH</h3>
+                <br>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+    </footer>
+    <div class="flat_sticky">
+        <div>
+            <h1>FLAT RS.300 OFF</h1>
+        </div> 
+    </div>
+</body>
+
+</html>
